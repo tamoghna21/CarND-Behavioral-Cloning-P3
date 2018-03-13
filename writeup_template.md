@@ -19,7 +19,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/placeholder.png "Model Visualization"
-[image2]: ./examples/placeholder.png "Grayscaling"
+[image2]: ./examples/center_lane.png "Center lane driving"
 [image3]: ./examples/placeholder_small.png "Recovery Image"
 [image4]: ./examples/placeholder_small.png "Recovery Image"
 [image5]: ./examples/placeholder_small.png "Recovery Image"
@@ -94,7 +94,17 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 #### 2. Final Model Architecture
 
-The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes ...
+The final model architecture (model.py lines 149-159) consisted of a convolution neural network with the following layers and layer sizes:
+1)First convolutional layer of 5x5 and filter size of 24. Stride is 2 and Activation ReLu
+2)Second convolutional layer of 5x5 and filter size of 36. Stride is 2 and Activation ReLu
+3)Third convolutional layer of 5X5 and filter size of 48. Stride is 2 and Activation ReLu
+4)Fourth convolutional layer of 3x3 and filter size of 64. Stride is 1 and Activation ReLu
+5)Fifth convolutional layer of 3x3 and filter size of 64. Stride is 1 and Activation ReLu
+6)Then a Flatten layer
+7)Then a Fully connected layer of output 100 features
+8)Then a Fully connected layer of output 50 features
+9)Then a Fully connected layer of output 10 features
+10)Then a Fully connected layer of output 1 feature
 
 Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
 
